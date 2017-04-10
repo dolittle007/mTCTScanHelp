@@ -77,28 +77,13 @@
         }, 
         {
             "location": "/about/", 
-            "text": "In se erat procis succinctis in facilem\n\n\nAtris inmiti pia dentes in fusus pio\n\n\nLorem markdownum Phorbas regi quercus? Aut qua haec \nSibylla habet mox\n\nmiserande \nquis iram\n deum dictaque\ncum. Quoque nec sed minuendo donis, quam \ntunc\n inde\nsubstitit in Venus orba nec fueritque facies terraeque, mihi.\n\n\n\n\nManus docta Iliaden pars facti Saturnia pendentemque\n\n\nTellus et sed tam Boeotiaque sonos falsosque\n\n\nHabetque spumis se tam est eum oculosque\n\n\nCruore lumine perque\n\n\nLiceret regione stimulis\n\n\n\n\nEst caesas quanto Teucras\n\n\nAliquis \niuvenis\n atque scabrae facit, nec\nterram avidus obsceno. Laetitiae aut et vertitur Dictys voto si cum\n\nunam\n ipsa per ventis stupet. Duro habes,\nhabet terras dixit virum rettulit deos nec, aera tamen arte quondam. Cito tua\ndum cui sororis uni \ntempore\n cavo fuit rapinae hoc trahens:\nsenectae probavit auspicio, crus.\n\n\nAdsit vana vulgata \nAchilles an impia\n hos\nrecursus in erubuit facit, arvis ante quid? Bibulas uror fuit sperantemque\nceleres pars consorti tumidaeque aquas est, at potes. Si multos \nsedes fluctus\naspera\n vasto circumdare fraudare; reducere miscuerat Anigrus moriensque erat.\n\n\nImponit quis dolebo esse non\n\n\nInfantem spatium. Sacer auro subeant heros alta abigitque et pinguis et datique\nillos, nec census abdita; nec gigantas Minos, fusus.\n\n\nAdeo luteave nec reducunt sub \ngener uvis faticano\n peremit tanta est putrefacta\ninmensum miserantibus forte expugnacior. Ferrea sucis faciunt suis nisi genitor\npervigil Oenides movere, nova. \nVidit\n semine\nherbis, arva fracta haec Asbolos, ara ligones. Origine labens tamen iam pro\nomnipotens mirantum demum \net dixit sociorum\n in gurgite miscentur tenuit,\ncurvantur quoque.\n\n\nAnte arce vestigia et tantum, exire omine, cursu senatus licet auras modo\nfunduntur alios cernes. Annua est caeli infamis dubitare parsque. Quod ubi;\ninvidiamque aevum magnae nomine tantus in pleno procumbere fossae memorque dura.", 
+            "text": "This is also for testing", 
             "title": "About"
         }, 
         {
-            "location": "/about/#in-se-erat-procis-succinctis-in-facilem", 
+            "location": "/about/#this-is-also-for-testing", 
             "text": "", 
-            "title": "In se erat procis succinctis in facilem"
-        }, 
-        {
-            "location": "/about/#atris-inmiti-pia-dentes-in-fusus-pio", 
-            "text": "Lorem markdownum Phorbas regi quercus? Aut qua haec  Sibylla habet mox \nmiserande  quis iram  deum dictaque\ncum. Quoque nec sed minuendo donis, quam  tunc  inde\nsubstitit in Venus orba nec fueritque facies terraeque, mihi.   Manus docta Iliaden pars facti Saturnia pendentemque  Tellus et sed tam Boeotiaque sonos falsosque  Habetque spumis se tam est eum oculosque  Cruore lumine perque  Liceret regione stimulis", 
-            "title": "Atris inmiti pia dentes in fusus pio"
-        }, 
-        {
-            "location": "/about/#est-caesas-quanto-teucras", 
-            "text": "Aliquis  iuvenis  atque scabrae facit, nec\nterram avidus obsceno. Laetitiae aut et vertitur Dictys voto si cum unam  ipsa per ventis stupet. Duro habes,\nhabet terras dixit virum rettulit deos nec, aera tamen arte quondam. Cito tua\ndum cui sororis uni  tempore  cavo fuit rapinae hoc trahens:\nsenectae probavit auspicio, crus.  Adsit vana vulgata  Achilles an impia  hos\nrecursus in erubuit facit, arvis ante quid? Bibulas uror fuit sperantemque\nceleres pars consorti tumidaeque aquas est, at potes. Si multos  sedes fluctus\naspera  vasto circumdare fraudare; reducere miscuerat Anigrus moriensque erat.", 
-            "title": "Est caesas quanto Teucras"
-        }, 
-        {
-            "location": "/about/#imponit-quis-dolebo-esse-non", 
-            "text": "Infantem spatium. Sacer auro subeant heros alta abigitque et pinguis et datique\nillos, nec census abdita; nec gigantas Minos, fusus.  Adeo luteave nec reducunt sub  gener uvis faticano  peremit tanta est putrefacta\ninmensum miserantibus forte expugnacior. Ferrea sucis faciunt suis nisi genitor\npervigil Oenides movere, nova.  Vidit  semine\nherbis, arva fracta haec Asbolos, ara ligones. Origine labens tamen iam pro\nomnipotens mirantum demum  et dixit sociorum  in gurgite miscentur tenuit,\ncurvantur quoque.  Ante arce vestigia et tantum, exire omine, cursu senatus licet auras modo\nfunduntur alios cernes. Annua est caeli infamis dubitare parsque. Quod ubi;\ninvidiamque aevum magnae nomine tantus in pleno procumbere fossae memorque dura.", 
-            "title": "Imponit quis dolebo esse non"
+            "title": "This is also for testing"
         }
     ]
 }
