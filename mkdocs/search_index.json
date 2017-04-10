@@ -1,0 +1,104 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "mTCTScan\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nHow to use mTCTScan Server?\n\n\n\n\nJob submission\n\n\n\n\nInput cancer mutation profile, we currently support VCF file for hg19/grch37\n\n\n\nDefine the filtering parameters for cancer type, gene panel and allele frequency. Two allele frequency database are supported including 1000 Genomes project phase 3 and ExAC\n\n\nWe used SnpEff to annotate cancer mutations, and user can select and filter the undesired variant features\n\n\n\n\n\n\nJob tracking\n\n\nmTCTScan supports job retrieving from two manners\n\n\nUse fixed job URL\n\n\nUse browser cookies in the Job menu\n\n\n\n\nMutation Prioritization\n\n\nmTCTScan utilizes an evidence-based scoring strategy to prioritize the mutations associated with drug sensitivity. Generally, we divided the evidences of mutations associated drug sensitivity into following four categories, including  \n\n\n\n\nAltered Sensitivity [Hit]: The mutation exactly hits the known mutation that influences drug response\n\n\nCell Line Evidence: The gene in the mutation locus matches the significant gene-drug sensitivity in cell line level pharmacogenomics screens\n\n\nAltered Sensitivity [Match]: The mutation matches the known mutations (like mutation combination, or degenerative sequence) that associates drug response\n\n\nAltered Sensitivity [Overlap]: The mutation overlaps the known mutations (like large mutations, or structural variants) that associates drug response\n\n\n\n\nAccording to the importance of evidences, mTCTScan rank the qualified mutations in a table. User can click the \"Details\" to check more information:\n\n\n\n\nMutation annotations\n\n\nmTCTScan reports all related mutation-affected gene transcripts:\n\n\nUser can click each mutation record to expand the annotation panel.\n\n\nEleven different annotation fields are provided, which include basic mutation information, germline allele frequency (from 1000 Genomes project, ExAC, UK10K, ESP project), somatic recurrence rate from TCGA, ICGC and COSMIC, clinical associated mutation from ClinVar, functional predictions (nonsynonymous, splicing and non-coding functional prediction) and base-wise conservation.\n\n\nFor example, user can click \"ClinVar\" or \"Nonsynonymous Functional Prediction\" item to inspect detailed information:\n\n\n\n\nMutation-dependent drug response\n\n\nDetails Implication\n\n\nFor each mutation-affected transcript, user can check the \"Details Implication\" button to get the mutation-dependent drug sensitivity information:\n\n\nA series visualization functions to display mutation, drug sensitivity and drug information:\n\n\n\n\nLollipop-style mutation diagrams to visualize variant position in protein functional domain\n\n\nFour level of evidences to show the mutation-dependent drug sensitivity\n\n\nMutation implication details and drug information from DrugBank and Clinic Trial\n\n\nMutation Implication Summary\n\n\nDrug \n Therapy Information\n\n\nClinical Trial Information\n\n\n\n\n\n\n\n\nGene-Drug Information\n\n\nFor each mutation-affected transcript, user can also check the related drug/compound information in the gene level\n\n\n\n\nDrug and therapy information\n\n\nClinical trial information\n\n\n\n\n\n\nQuery by single mutation\n\n\nmTCTScan also introduces a search engine for the query of associated drug response at single mutation", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#mtctscan", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "mTCTScan"
+        }, 
+        {
+            "location": "/#how-to-use-mtctscan-server", 
+            "text": "", 
+            "title": "How to use mTCTScan Server?"
+        }, 
+        {
+            "location": "/#job-submission", 
+            "text": "Input cancer mutation profile, we currently support VCF file for hg19/grch37  Define the filtering parameters for cancer type, gene panel and allele frequency. Two allele frequency database are supported including 1000 Genomes project phase 3 and ExAC  We used SnpEff to annotate cancer mutations, and user can select and filter the undesired variant features", 
+            "title": "Job submission"
+        }, 
+        {
+            "location": "/#job-tracking", 
+            "text": "mTCTScan supports job retrieving from two manners", 
+            "title": "Job tracking"
+        }, 
+        {
+            "location": "/#use-fixed-job-url", 
+            "text": "", 
+            "title": "Use fixed job URL"
+        }, 
+        {
+            "location": "/#use-browser-cookies-in-the-job-menu", 
+            "text": "", 
+            "title": "Use browser cookies in the Job menu"
+        }, 
+        {
+            "location": "/#mutation-prioritization", 
+            "text": "mTCTScan utilizes an evidence-based scoring strategy to prioritize the mutations associated with drug sensitivity. Generally, we divided the evidences of mutations associated drug sensitivity into following four categories, including     Altered Sensitivity [Hit]: The mutation exactly hits the known mutation that influences drug response  Cell Line Evidence: The gene in the mutation locus matches the significant gene-drug sensitivity in cell line level pharmacogenomics screens  Altered Sensitivity [Match]: The mutation matches the known mutations (like mutation combination, or degenerative sequence) that associates drug response  Altered Sensitivity [Overlap]: The mutation overlaps the known mutations (like large mutations, or structural variants) that associates drug response   According to the importance of evidences, mTCTScan rank the qualified mutations in a table. User can click the \"Details\" to check more information:", 
+            "title": "Mutation Prioritization"
+        }, 
+        {
+            "location": "/#mutation-annotations", 
+            "text": "mTCTScan reports all related mutation-affected gene transcripts:  User can click each mutation record to expand the annotation panel.  Eleven different annotation fields are provided, which include basic mutation information, germline allele frequency (from 1000 Genomes project, ExAC, UK10K, ESP project), somatic recurrence rate from TCGA, ICGC and COSMIC, clinical associated mutation from ClinVar, functional predictions (nonsynonymous, splicing and non-coding functional prediction) and base-wise conservation.  For example, user can click \"ClinVar\" or \"Nonsynonymous Functional Prediction\" item to inspect detailed information:", 
+            "title": "Mutation annotations"
+        }, 
+        {
+            "location": "/#mutation-dependent-drug-response", 
+            "text": "", 
+            "title": "Mutation-dependent drug response"
+        }, 
+        {
+            "location": "/#details-implication", 
+            "text": "For each mutation-affected transcript, user can check the \"Details Implication\" button to get the mutation-dependent drug sensitivity information:  A series visualization functions to display mutation, drug sensitivity and drug information:   Lollipop-style mutation diagrams to visualize variant position in protein functional domain  Four level of evidences to show the mutation-dependent drug sensitivity  Mutation implication details and drug information from DrugBank and Clinic Trial  Mutation Implication Summary  Drug   Therapy Information  Clinical Trial Information", 
+            "title": "Details Implication"
+        }, 
+        {
+            "location": "/#gene-drug-information", 
+            "text": "For each mutation-affected transcript, user can also check the related drug/compound information in the gene level   Drug and therapy information  Clinical trial information", 
+            "title": "Gene-Drug Information"
+        }, 
+        {
+            "location": "/#query-by-single-mutation", 
+            "text": "mTCTScan also introduces a search engine for the query of associated drug response at single mutation", 
+            "title": "Query by single mutation"
+        }, 
+        {
+            "location": "/documentation/", 
+            "text": "testing the page", 
+            "title": "Documentation"
+        }, 
+        {
+            "location": "/documentation/#testing-the-page", 
+            "text": "", 
+            "title": "testing the page"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "In se erat procis succinctis in facilem\n\n\nAtris inmiti pia dentes in fusus pio\n\n\nLorem markdownum Phorbas regi quercus? Aut qua haec \nSibylla habet mox\n\nmiserande \nquis iram\n deum dictaque\ncum. Quoque nec sed minuendo donis, quam \ntunc\n inde\nsubstitit in Venus orba nec fueritque facies terraeque, mihi.\n\n\n\n\nManus docta Iliaden pars facti Saturnia pendentemque\n\n\nTellus et sed tam Boeotiaque sonos falsosque\n\n\nHabetque spumis se tam est eum oculosque\n\n\nCruore lumine perque\n\n\nLiceret regione stimulis\n\n\n\n\nEst caesas quanto Teucras\n\n\nAliquis \niuvenis\n atque scabrae facit, nec\nterram avidus obsceno. Laetitiae aut et vertitur Dictys voto si cum\n\nunam\n ipsa per ventis stupet. Duro habes,\nhabet terras dixit virum rettulit deos nec, aera tamen arte quondam. Cito tua\ndum cui sororis uni \ntempore\n cavo fuit rapinae hoc trahens:\nsenectae probavit auspicio, crus.\n\n\nAdsit vana vulgata \nAchilles an impia\n hos\nrecursus in erubuit facit, arvis ante quid? Bibulas uror fuit sperantemque\nceleres pars consorti tumidaeque aquas est, at potes. Si multos \nsedes fluctus\naspera\n vasto circumdare fraudare; reducere miscuerat Anigrus moriensque erat.\n\n\nImponit quis dolebo esse non\n\n\nInfantem spatium. Sacer auro subeant heros alta abigitque et pinguis et datique\nillos, nec census abdita; nec gigantas Minos, fusus.\n\n\nAdeo luteave nec reducunt sub \ngener uvis faticano\n peremit tanta est putrefacta\ninmensum miserantibus forte expugnacior. Ferrea sucis faciunt suis nisi genitor\npervigil Oenides movere, nova. \nVidit\n semine\nherbis, arva fracta haec Asbolos, ara ligones. Origine labens tamen iam pro\nomnipotens mirantum demum \net dixit sociorum\n in gurgite miscentur tenuit,\ncurvantur quoque.\n\n\nAnte arce vestigia et tantum, exire omine, cursu senatus licet auras modo\nfunduntur alios cernes. Annua est caeli infamis dubitare parsque. Quod ubi;\ninvidiamque aevum magnae nomine tantus in pleno procumbere fossae memorque dura.", 
+            "title": "About"
+        }, 
+        {
+            "location": "/about/#in-se-erat-procis-succinctis-in-facilem", 
+            "text": "", 
+            "title": "In se erat procis succinctis in facilem"
+        }, 
+        {
+            "location": "/about/#atris-inmiti-pia-dentes-in-fusus-pio", 
+            "text": "Lorem markdownum Phorbas regi quercus? Aut qua haec  Sibylla habet mox \nmiserande  quis iram  deum dictaque\ncum. Quoque nec sed minuendo donis, quam  tunc  inde\nsubstitit in Venus orba nec fueritque facies terraeque, mihi.   Manus docta Iliaden pars facti Saturnia pendentemque  Tellus et sed tam Boeotiaque sonos falsosque  Habetque spumis se tam est eum oculosque  Cruore lumine perque  Liceret regione stimulis", 
+            "title": "Atris inmiti pia dentes in fusus pio"
+        }, 
+        {
+            "location": "/about/#est-caesas-quanto-teucras", 
+            "text": "Aliquis  iuvenis  atque scabrae facit, nec\nterram avidus obsceno. Laetitiae aut et vertitur Dictys voto si cum unam  ipsa per ventis stupet. Duro habes,\nhabet terras dixit virum rettulit deos nec, aera tamen arte quondam. Cito tua\ndum cui sororis uni  tempore  cavo fuit rapinae hoc trahens:\nsenectae probavit auspicio, crus.  Adsit vana vulgata  Achilles an impia  hos\nrecursus in erubuit facit, arvis ante quid? Bibulas uror fuit sperantemque\nceleres pars consorti tumidaeque aquas est, at potes. Si multos  sedes fluctus\naspera  vasto circumdare fraudare; reducere miscuerat Anigrus moriensque erat.", 
+            "title": "Est caesas quanto Teucras"
+        }, 
+        {
+            "location": "/about/#imponit-quis-dolebo-esse-non", 
+            "text": "Infantem spatium. Sacer auro subeant heros alta abigitque et pinguis et datique\nillos, nec census abdita; nec gigantas Minos, fusus.  Adeo luteave nec reducunt sub  gener uvis faticano  peremit tanta est putrefacta\ninmensum miserantibus forte expugnacior. Ferrea sucis faciunt suis nisi genitor\npervigil Oenides movere, nova.  Vidit  semine\nherbis, arva fracta haec Asbolos, ara ligones. Origine labens tamen iam pro\nomnipotens mirantum demum  et dixit sociorum  in gurgite miscentur tenuit,\ncurvantur quoque.  Ante arce vestigia et tantum, exire omine, cursu senatus licet auras modo\nfunduntur alios cernes. Annua est caeli infamis dubitare parsque. Quod ubi;\ninvidiamque aevum magnae nomine tantus in pleno procumbere fossae memorque dura.", 
+            "title": "Imponit quis dolebo esse non"
+        }
+    ]
+}
