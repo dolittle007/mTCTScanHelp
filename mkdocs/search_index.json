@@ -2,23 +2,38 @@
     "docs": [
         {
             "location": "/", 
-            "text": "mTCTScan\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nHow to use mTCTScan Server?\n\n\n\n\nJob submission\n\n\n\n\nInput cancer mutation profile, we currently support VCF file for hg19/grch37\n\n\n\nDefine the filtering parameters for cancer type, gene panel and allele frequency. Two allele frequency database are supported including 1000 Genomes project phase 3 and ExAC\n\n\nWe used SnpEff to annotate cancer mutations, and user can select and filter the undesired variant features\n\n\n\n\n\n\nJob tracking\n\n\nmTCTScan supports job retrieving from two manners\n\n\nUse fixed job URL\n\n\nUse browser cookies in the Job menu\n\n\n\n\nMutation Prioritization\n\n\nmTCTScan utilizes an evidence-based scoring strategy to prioritize the mutations associated with drug sensitivity. Generally, we divided the evidences of mutations associated drug sensitivity into following four categories, including  \n\n\n\n\nAltered Sensitivity [Hit]: The mutation exactly hits the known mutation that influences drug response\n\n\nCell Line Evidence: The gene in the mutation locus matches the significant gene-drug sensitivity in cell line level pharmacogenomics screens\n\n\nAltered Sensitivity [Match]: The mutation matches the known mutations (like mutation combination, or degenerative sequence) that associates drug response\n\n\nAltered Sensitivity [Overlap]: The mutation overlaps the known mutations (like large mutations, or structural variants) that associates drug response\n\n\n\n\nAccording to the importance of evidences, mTCTScan rank the qualified mutations in a table. User can click the \"Details\" to check more information:\n\n\n\n\nMutation annotations\n\n\nmTCTScan reports all related mutation-affected gene transcripts:\n\n\nUser can click each mutation record to expand the annotation panel.\n\n\nEleven different annotation fields are provided, which include basic mutation information, germline allele frequency (from 1000 Genomes project, ExAC, UK10K, ESP project), somatic recurrence rate from TCGA, ICGC and COSMIC, clinical associated mutation from ClinVar, functional predictions (nonsynonymous, splicing and non-coding functional prediction) and base-wise conservation.\n\n\nFor example, user can click \"ClinVar\" or \"Nonsynonymous Functional Prediction\" item to inspect detailed information:\n\n\n\n\nMutation-dependent drug response\n\n\nDetails Implication\n\n\nFor each mutation-affected transcript, user can check the \"Details Implication\" button to get the mutation-dependent drug sensitivity information:\n\n\nA series visualization functions to display mutation, drug sensitivity and drug information:\n\n\n\n\nLollipop-style mutation diagrams to visualize variant position in protein functional domain\n\n\nFour level of evidences to show the mutation-dependent drug sensitivity\n\n\nMutation implication details and drug information from DrugBank and Clinic Trial\n\n\nMutation Implication Summary\n\n\nDrug \n Therapy Information\n\n\nClinical Trial Information\n\n\n\n\n\n\n\n\nGene-Drug Information\n\n\nFor each mutation-affected transcript, user can also check the related drug/compound information in the gene level\n\n\n\n\nDrug and therapy information\n\n\nClinical trial information\n\n\n\n\n\n\nQuery by single mutation\n\n\nmTCTScan also introduces a search engine for the query of associated drug response at single mutation", 
+            "text": "How to use mTCTScan?\n\uf0c1\n\n\nFor the webserver visit \nmTCTScan\n.\n\n\n\n\nJob submission\n\uf0c1\n\n\nInput profile\n\uf0c1\n\n\nInput cancer mutation profile, we currently support VCF file for hg19/grch37\n\n\n\n\nMutation filtering\n\uf0c1\n\n\nGeneral parameters\n\uf0c1\n\n\nDefine the filtering parameters for \ncancer type\n, \ngene panel\n and \nallele frequency\n. Two allele frequency database are supported including 1000 Genomes project phase 3 and ExAC\n\n\n\n\nSnpEff parameters\n\uf0c1\n\n\nWe used SnpEff to annotate cancer mutations, and users can select and filter the undesired variant features\n\n\n \n\n\n\n\nJob tracking\n\uf0c1\n\n\nmTCTScan supports job retrieving from two manners\n\n\nFixed job URL\n\uf0c1\n\n\n\n\nBrowser cookies in the Job menu\n\uf0c1\n\n\n\n\n\n\nPrioritization result\n\uf0c1\n\n\nMutation prioritization\n\uf0c1\n\n\nFor each mutation at the transcript level, mTCTScan utilizes an evidence-based scoring strategy to prioritize the mutations associated with drug sensitivity. \n\n\nFirst, mTCTScan uses a series of matching strategies to connect each mutation-affected transcript to our collected mutation-cancer drug association records, including \nExact Match\n, \nPartial Match\n, \nSmall-scale Overlap\n and \nLocus-based Overlap\n.\n\n\n\n\nExact Match\n requires that the genomic coordinates or protein effect of query mutations are exactly the same as our collected records\n\n\nPartial Match\n asks that protein effect of query mutation refers to same amino acid change with  collected records, or the genomic coordinates or protein effect of the query mutation exactly match one or part of the record\u2019s mutations (some records require the concurrence of multiple mutations)\n\n\nSmall-scale Overlap\n means that the genomic coordinates of query mutation overlaps with collected records at small insertions or deletions (Indel) scale\n\n\nLocus-based Overlap\n describes that the genomic coordinates of query mutation overlaps with collected records at structure variations scale. \n\n\nIn addition, mTCTScan would also search through cancer functional events and drug sensitivity associations which are from cell line data by matching query mutation to related cancer functional events. \n\n\n\n\nIn order to retrieve all relevant evidences of different levels, mTCTScan would map every mutation to each of above categories. \n\n\nSecond, each association record contains a confidence level with five grades including\n\n\n\n\nProven\n\n\nClinical trial stage\n\n\nCase report stage\n\n\nPreclinical stage\n\n\nInferential stage\n\n\n\n\nThen, for each mutation, by considering both the matching degree and the confidence level of association records, an evidence-based ensemble score would be calculated. According to this score, mTCTScan would rank all qualified mutations (mutations match with at least one record) in a table. User can click the \nDetails\n button to get more information\n\n\n\n\nCancer drug classificaiton\n\uf0c1\n\n\nFor each drug/compound, mTCTScan would compare whether the mutations' impacts on drug sensitivity are consistent or conflicting across all associated mutations at the \"Exact Match\" and \"Partial Match\" levels. Based on the following criteria, drugs/compounds were divided into three categories\n\n\n\n\nIncreased Sensitivity\n indicating that mutations consistently increase this drug\u2019s sensitivity or response\n\n\nReduced Sensitivity\n indicating that mutations consistently decrease this drug\u2019s sensitivity or response\n\n\nConflicting Sensitivity\n indicating that at least one mutation modulates sensitivity or response of this drug in an opposite direction comparing with others.\n\n\n\n\nIn addition, mTCTScan uses the number of associated mutations as the order to present drugs in each category.\n\n\n\n\n\n\nMutation annotations\n\uf0c1\n\n\nmTCTScan reports all related mutation-affected gene transcripts.\n\n\n\n\nUsers can click each mutation record to expand the annotation panel.\n\n\n\n\nEleven different annotation fields are provided, which include basic \nMutation Information\n, \nGermline Allele Frequency\n (from 1000 Genomes project, ExAC, UK10K, ESP project), somatic recurrence rate from \nTCGAs\n, \nICGC\n and \nCOSMIC\n, clinical associated mutations from \nClinVar\n, functional predictions including \nNonsynonymous Functional Prediction\n, \nSplicing Functional Prediction\n and \nNon-coding Functional Prediction\n and base-wise \nConservation\n.\n\n\nFor example, user can click \nClinVar\n item to inspect detailed information\n\n\n\n\n\n\nMutation-cancer drug association\n\uf0c1\n\n\nAssociation detail\n\uf0c1\n\n\nFor each mutation-affected transcript, user can check the \nDetails Implication\n button to get all associated records\n\n\n\n\nFor each transcript, a \nlollipop-style diagram\n and tabs to display \ndifferent levels of matched evidences\n are provided.\n\n\nMoreover, for each association record, addition tabs are provided to display \nMutation Association Summary\n, \nDrug \n Therapy Information\n and \nClinical Trial Information\n related to the drug.\n\n\nLollipop-style diagram\n\uf0c1\n\n\nLollipop-style mutation diagrams to visualize variant position in protein functional domain\n\n\n\n\nDifferent levels of matched evidences\n\uf0c1\n\n\nFor each query mutation, four levels of matching strategies were used to retrieve records from our database\n\n\n\n\nMutation Association Summary\n\uf0c1\n\n\n\n\nDrug \n Therapy Information\n\uf0c1\n\n\n\n\nClinical Trial Information\n\uf0c1\n\n\n\n\nGene-Drug Information\n\uf0c1\n\n\nFor each mutation-affected transcript, mTCTScan also reports related drugs/compounds information based on the relationship between drugs and their gene targets. Also, clinical trial information related to these drugs are be provided.\n\n\nDrug and therapy information\n\uf0c1\n\n\n\n\nClinical trial information\n\uf0c1\n\n\n\n\n\n\nQuery by single mutation\n\uf0c1\n\n\nmTCTScan also introduces a search engine for the query of associated drug response by a single mutation", 
             "title": "Home"
         }, 
         {
-            "location": "/#mtctscan", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "mTCTScan"
-        }, 
-        {
-            "location": "/#how-to-use-mtctscan-server", 
-            "text": "", 
-            "title": "How to use mTCTScan Server?"
+            "location": "/#how-to-use-mtctscan", 
+            "text": "For the webserver visit  mTCTScan .", 
+            "title": "How to use mTCTScan?"
         }, 
         {
             "location": "/#job-submission", 
-            "text": "Input cancer mutation profile, we currently support VCF file for hg19/grch37  Define the filtering parameters for cancer type, gene panel and allele frequency. Two allele frequency database are supported including 1000 Genomes project phase 3 and ExAC  We used SnpEff to annotate cancer mutations, and user can select and filter the undesired variant features", 
+            "text": "", 
             "title": "Job submission"
+        }, 
+        {
+            "location": "/#input-profile", 
+            "text": "Input cancer mutation profile, we currently support VCF file for hg19/grch37", 
+            "title": "Input profile"
+        }, 
+        {
+            "location": "/#mutation-filtering", 
+            "text": "", 
+            "title": "Mutation filtering"
+        }, 
+        {
+            "location": "/#general-parameters", 
+            "text": "Define the filtering parameters for  cancer type ,  gene panel  and  allele frequency . Two allele frequency database are supported including 1000 Genomes project phase 3 and ExAC", 
+            "title": "General parameters"
+        }, 
+        {
+            "location": "/#snpeff-parameters", 
+            "text": "We used SnpEff to annotate cancer mutations, and users can select and filter the undesired variant features", 
+            "title": "SnpEff parameters"
         }, 
         {
             "location": "/#job-tracking", 
@@ -26,64 +41,89 @@
             "title": "Job tracking"
         }, 
         {
-            "location": "/#use-fixed-job-url", 
+            "location": "/#fixed-job-url", 
             "text": "", 
-            "title": "Use fixed job URL"
+            "title": "Fixed job URL"
         }, 
         {
-            "location": "/#use-browser-cookies-in-the-job-menu", 
+            "location": "/#browser-cookies-in-the-job-menu", 
             "text": "", 
-            "title": "Use browser cookies in the Job menu"
+            "title": "Browser cookies in the Job menu"
+        }, 
+        {
+            "location": "/#prioritization-result", 
+            "text": "", 
+            "title": "Prioritization result"
         }, 
         {
             "location": "/#mutation-prioritization", 
-            "text": "mTCTScan utilizes an evidence-based scoring strategy to prioritize the mutations associated with drug sensitivity. Generally, we divided the evidences of mutations associated drug sensitivity into following four categories, including     Altered Sensitivity [Hit]: The mutation exactly hits the known mutation that influences drug response  Cell Line Evidence: The gene in the mutation locus matches the significant gene-drug sensitivity in cell line level pharmacogenomics screens  Altered Sensitivity [Match]: The mutation matches the known mutations (like mutation combination, or degenerative sequence) that associates drug response  Altered Sensitivity [Overlap]: The mutation overlaps the known mutations (like large mutations, or structural variants) that associates drug response   According to the importance of evidences, mTCTScan rank the qualified mutations in a table. User can click the \"Details\" to check more information:", 
-            "title": "Mutation Prioritization"
+            "text": "For each mutation at the transcript level, mTCTScan utilizes an evidence-based scoring strategy to prioritize the mutations associated with drug sensitivity.   First, mTCTScan uses a series of matching strategies to connect each mutation-affected transcript to our collected mutation-cancer drug association records, including  Exact Match ,  Partial Match ,  Small-scale Overlap  and  Locus-based Overlap .   Exact Match  requires that the genomic coordinates or protein effect of query mutations are exactly the same as our collected records  Partial Match  asks that protein effect of query mutation refers to same amino acid change with  collected records, or the genomic coordinates or protein effect of the query mutation exactly match one or part of the record\u2019s mutations (some records require the concurrence of multiple mutations)  Small-scale Overlap  means that the genomic coordinates of query mutation overlaps with collected records at small insertions or deletions (Indel) scale  Locus-based Overlap  describes that the genomic coordinates of query mutation overlaps with collected records at structure variations scale.   In addition, mTCTScan would also search through cancer functional events and drug sensitivity associations which are from cell line data by matching query mutation to related cancer functional events.    In order to retrieve all relevant evidences of different levels, mTCTScan would map every mutation to each of above categories.   Second, each association record contains a confidence level with five grades including   Proven  Clinical trial stage  Case report stage  Preclinical stage  Inferential stage   Then, for each mutation, by considering both the matching degree and the confidence level of association records, an evidence-based ensemble score would be calculated. According to this score, mTCTScan would rank all qualified mutations (mutations match with at least one record) in a table. User can click the  Details  button to get more information", 
+            "title": "Mutation prioritization"
+        }, 
+        {
+            "location": "/#cancer-drug-classificaiton", 
+            "text": "For each drug/compound, mTCTScan would compare whether the mutations' impacts on drug sensitivity are consistent or conflicting across all associated mutations at the \"Exact Match\" and \"Partial Match\" levels. Based on the following criteria, drugs/compounds were divided into three categories   Increased Sensitivity  indicating that mutations consistently increase this drug\u2019s sensitivity or response  Reduced Sensitivity  indicating that mutations consistently decrease this drug\u2019s sensitivity or response  Conflicting Sensitivity  indicating that at least one mutation modulates sensitivity or response of this drug in an opposite direction comparing with others.   In addition, mTCTScan uses the number of associated mutations as the order to present drugs in each category.", 
+            "title": "Cancer drug classificaiton"
         }, 
         {
             "location": "/#mutation-annotations", 
-            "text": "mTCTScan reports all related mutation-affected gene transcripts:  User can click each mutation record to expand the annotation panel.  Eleven different annotation fields are provided, which include basic mutation information, germline allele frequency (from 1000 Genomes project, ExAC, UK10K, ESP project), somatic recurrence rate from TCGA, ICGC and COSMIC, clinical associated mutation from ClinVar, functional predictions (nonsynonymous, splicing and non-coding functional prediction) and base-wise conservation.  For example, user can click \"ClinVar\" or \"Nonsynonymous Functional Prediction\" item to inspect detailed information:", 
+            "text": "mTCTScan reports all related mutation-affected gene transcripts.   Users can click each mutation record to expand the annotation panel.   Eleven different annotation fields are provided, which include basic  Mutation Information ,  Germline Allele Frequency  (from 1000 Genomes project, ExAC, UK10K, ESP project), somatic recurrence rate from  TCGAs ,  ICGC  and  COSMIC , clinical associated mutations from  ClinVar , functional predictions including  Nonsynonymous Functional Prediction ,  Splicing Functional Prediction  and  Non-coding Functional Prediction  and base-wise  Conservation .  For example, user can click  ClinVar  item to inspect detailed information", 
             "title": "Mutation annotations"
         }, 
         {
-            "location": "/#mutation-dependent-drug-response", 
+            "location": "/#mutation-cancer-drug-association", 
             "text": "", 
-            "title": "Mutation-dependent drug response"
+            "title": "Mutation-cancer drug association"
         }, 
         {
-            "location": "/#details-implication", 
-            "text": "For each mutation-affected transcript, user can check the \"Details Implication\" button to get the mutation-dependent drug sensitivity information:  A series visualization functions to display mutation, drug sensitivity and drug information:   Lollipop-style mutation diagrams to visualize variant position in protein functional domain  Four level of evidences to show the mutation-dependent drug sensitivity  Mutation implication details and drug information from DrugBank and Clinic Trial  Mutation Implication Summary  Drug   Therapy Information  Clinical Trial Information", 
-            "title": "Details Implication"
+            "location": "/#association-detail", 
+            "text": "For each mutation-affected transcript, user can check the  Details Implication  button to get all associated records   For each transcript, a  lollipop-style diagram  and tabs to display  different levels of matched evidences  are provided.  Moreover, for each association record, addition tabs are provided to display  Mutation Association Summary ,  Drug   Therapy Information  and  Clinical Trial Information  related to the drug.", 
+            "title": "Association detail"
+        }, 
+        {
+            "location": "/#lollipop-style-diagram", 
+            "text": "Lollipop-style mutation diagrams to visualize variant position in protein functional domain", 
+            "title": "Lollipop-style diagram"
+        }, 
+        {
+            "location": "/#different-levels-of-matched-evidences", 
+            "text": "For each query mutation, four levels of matching strategies were used to retrieve records from our database", 
+            "title": "Different levels of matched evidences"
+        }, 
+        {
+            "location": "/#mutation-association-summary", 
+            "text": "", 
+            "title": "Mutation Association Summary"
+        }, 
+        {
+            "location": "/#drug-therapy-information", 
+            "text": "", 
+            "title": "Drug &amp; Therapy Information"
+        }, 
+        {
+            "location": "/#clinical-trial-information", 
+            "text": "", 
+            "title": "Clinical Trial Information"
         }, 
         {
             "location": "/#gene-drug-information", 
-            "text": "For each mutation-affected transcript, user can also check the related drug/compound information in the gene level   Drug and therapy information  Clinical trial information", 
+            "text": "For each mutation-affected transcript, mTCTScan also reports related drugs/compounds information based on the relationship between drugs and their gene targets. Also, clinical trial information related to these drugs are be provided.", 
             "title": "Gene-Drug Information"
         }, 
         {
+            "location": "/#drug-and-therapy-information", 
+            "text": "", 
+            "title": "Drug and therapy information"
+        }, 
+        {
+            "location": "/#clinical-trial-information_1", 
+            "text": "", 
+            "title": "Clinical trial information"
+        }, 
+        {
             "location": "/#query-by-single-mutation", 
-            "text": "mTCTScan also introduces a search engine for the query of associated drug response at single mutation", 
+            "text": "mTCTScan also introduces a search engine for the query of associated drug response by a single mutation", 
             "title": "Query by single mutation"
-        }, 
-        {
-            "location": "/documentation/", 
-            "text": "testing the page", 
-            "title": "Documentation"
-        }, 
-        {
-            "location": "/documentation/#testing-the-page", 
-            "text": "", 
-            "title": "testing the page"
-        }, 
-        {
-            "location": "/about/", 
-            "text": "This is also for testing", 
-            "title": "About"
-        }, 
-        {
-            "location": "/about/#this-is-also-for-testing", 
-            "text": "", 
-            "title": "This is also for testing"
         }
     ]
 }
