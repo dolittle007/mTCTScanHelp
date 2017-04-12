@@ -2,7 +2,16 @@ site_name: mTCTScan Help
 site_author: Hongcheng Yao
 pages:
   - Home: index.md
-  - Documentation: documentation.md
-  - About: about.md
+  # - Documentation: 
+  #   - Data Sources: documentation.md
+  # - About: about.md
 theme: mkdocs
 theme_dir: 'custom_theme'
+
+
+markdown_extensions:
+    - toc:
+        permalink: 
+    - admonition:
+
+copyright: Copyright &copy; 2017 Hongcheng Yao.
