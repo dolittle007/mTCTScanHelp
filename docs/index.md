@@ -1,5 +1,5 @@
 # How to use mTCTScan?
-For the webserver visit [mTCTScan]().
+For the webserver visit [mTCTScan](http://147.8.193.38:7080/mtct).
 ***
 
 ## Job submission
